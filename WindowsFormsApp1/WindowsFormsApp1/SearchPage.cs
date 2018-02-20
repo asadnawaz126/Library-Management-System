@@ -185,23 +185,28 @@ namespace WindowsFormsApp1
 
                 //OleDbDataReader dr = cmd.ExecuteReader();
                 var dr1 = cmd1.ExecuteReader();
-               
-                    while (dr1.Read())
-                    {
-                        MessageBox.Show(dr1[1].ToString());
-                        listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[11].ToString());
-                        
-                    }
-                
-               
+                if (dr1.Read() == false)
+                {
+                    listBox5.Visible = false;
+                    MessageBox.Show("Match Not Found");
+
+                }
+                while (dr1.Read())
+                {
+                    //MessageBox.Show(dr1[1].ToString());
+                    listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[11].ToString());
+
+                }
+
+
             }
 
-           else if (selected == "Genre")
+            else if (selected == "Genre")
             {
                 listBox5.Items.Clear();
                 listBox5.Visible = true;
                 textBox3.Visible = true;
-                
+
                 String my_querry = "select * from tblBooks where Genre = '" + textBox3.Text + "' ";
 
 
@@ -209,14 +214,20 @@ namespace WindowsFormsApp1
 
                 //OleDbDataReader dr = cmd.ExecuteReader();
                 var dr1 = cmd1.ExecuteReader();
-                 while (dr1.Read())
-                    {
-                    MessageBox.Show(dr1[1].ToString());
+                if (dr1.Read() == false)
+                {
+                    listBox5.Visible = false;
+                    MessageBox.Show("Match Not Found");
+
+                }
+                while (dr1.Read())
+                {
+                    //MessageBox.Show(dr1[1].ToString());
                     listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[11].ToString());
 
-                    }
-                
-                
+                }
+
+
             }
 
             else if (selected == "Title")
@@ -225,12 +236,17 @@ namespace WindowsFormsApp1
                 listBox5.Items.Clear();
                 listBox5.Items.Add("Title                                     Status");
                 OleDbCommand sqlcommand = new OleDbCommand("select * from tblArtifacts where Title = '" + textBox4.Text + "'", conn);
-                OleDbDataReader rd = sqlcommand.ExecuteReader(); // Execute the sql command and store the results in a reader object
+                OleDbDataReader dr1 = sqlcommand.ExecuteReader(); // Execute the sql command and store the results in a reader object
                 listBox5.Visible = true;
-
-                while (rd.Read())
+                if (dr1.Read() == false)
                 {
-                    listBox5.Items.Add(rd.GetString(1) + "                              " + rd.GetString(11));
+                    listBox5.Visible = false;
+                    MessageBox.Show("Match Not Found");
+
+                }
+                while (dr1.Read())
+                {
+                    listBox5.Items.Add(dr1.GetString(1) + "                              " + dr1.GetString(11));
                 }
                 /*listBox5.Items.Clear();
                 listBox5.Visible = true;
@@ -271,5 +287,5 @@ namespace WindowsFormsApp1
 
         }
     }
-    
+
 }
