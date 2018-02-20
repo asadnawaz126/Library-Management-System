@@ -235,7 +235,7 @@ namespace WindowsFormsApp1
 
                 listBox5.Items.Clear();
                 listBox5.Items.Add("Title                                     Status");
-                OleDbCommand sqlcommand = new OleDbCommand("select * from tblArtifacts where Title = '" + textBox4.Text + "'", conn);
+                OleDbCommand sqlcommand = new OleDbCommand("select * from tblBooks where Title = '" + textBox4.Text + "'", conn);
                 OleDbDataReader dr1 = sqlcommand.ExecuteReader(); // Execute the sql command and store the results in a reader object
                 listBox5.Visible = true;
                 if (dr1.Read() == false)
