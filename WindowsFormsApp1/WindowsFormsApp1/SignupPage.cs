@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
 
             System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-        @"Data source= C:\Users\asadn\Documents\GitHub\Library-Management-System-SC_Lab2\Library.accdb";
+        @"Data source= F:\BESE\6th Semester\Software Construction\Labs\Lab 2\Library-Management-System-SC_Lab2\Library.accdb";
 
             try
             {
@@ -104,6 +104,11 @@ namespace WindowsFormsApp1
             this.Hide();
             LoginPage lp = new LoginPage();
             lp.Show();
+        }
+
+        private void SignupPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

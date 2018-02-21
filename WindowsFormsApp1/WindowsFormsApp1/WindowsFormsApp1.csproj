@@ -51,6 +51,12 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="issueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="issueForm.Designer.cs">
+      <DependentUpon>issueForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignupPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issueForm.resx">
+      <DependentUpon>issueForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignupPage.resx">
       <DependentUpon>SignupPage.cs</DependentUpon>

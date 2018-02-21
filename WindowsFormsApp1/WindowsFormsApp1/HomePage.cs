@@ -13,9 +13,12 @@ namespace WindowsFormsApp1
 {
     public partial class HomePage : Form
     {
-        public HomePage()
+        string usn;
+        public HomePage(string rusn)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
+            this.usn = rusn;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -27,7 +30,7 @@ namespace WindowsFormsApp1
         {
             System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-        @"Data source= C:\Users\asadn\Documents\GitHub\Library-Management-System-SC_Lab2\Library.accdb";
+        @"Data source= F:\BESE\6th Semester\Software Construction\Labs\Lab 2\Library-Management-System-SC_Lab2\Library.accdb";
 
             try
             {
@@ -58,6 +61,17 @@ namespace WindowsFormsApp1
         {
             SearchPage sp = new SearchPage();
             sp.Show();
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            issueForm instance = new issueForm(usn);
+            instance.Show();
         }
     }
 }

@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.load_Artifacts = new System.Windows.Forms.Button();
             this.goToSearchPage = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(22, 99);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(485, 180);
+            this.dataGridView1.Size = new System.Drawing.Size(901, 338);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -66,7 +67,7 @@
             // 
             // goToSearchPage
             // 
-            this.goToSearchPage.Location = new System.Drawing.Point(373, 295);
+            this.goToSearchPage.Location = new System.Drawing.Point(296, 443);
             this.goToSearchPage.Name = "goToSearchPage";
             this.goToSearchPage.Size = new System.Drawing.Size(134, 23);
             this.goToSearchPage.TabIndex = 3;
@@ -74,17 +75,29 @@
             this.goToSearchPage.UseVisualStyleBackColor = true;
             this.goToSearchPage.Click += new System.EventHandler(this.goToSearchPage_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(447, 443);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Issue A Book";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 321);
+            this.ClientSize = new System.Drawing.Size(936, 478);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.goToSearchPage);
             this.Controls.Add(this.load_Artifacts);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "HomePage";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,5 +110,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button load_Artifacts;
         private System.Windows.Forms.Button goToSearchPage;
+        private System.Windows.Forms.Button button1;
     }
 }

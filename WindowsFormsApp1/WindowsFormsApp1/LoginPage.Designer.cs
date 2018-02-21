@@ -101,6 +101,7 @@
             this.Controls.Add(this.label1);
             this.Name = "LoginPage";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

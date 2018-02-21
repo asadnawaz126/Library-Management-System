@@ -184,6 +184,7 @@
             this.Controls.Add(this.comboBox2);
             this.Name = "SearchPage";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.SearchPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

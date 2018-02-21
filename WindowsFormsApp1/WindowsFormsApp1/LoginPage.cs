@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         {
             System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-        @"Data source= C:\Users\asadn\Documents\GitHub\Library-Management-System-SC_Lab2\Library.accdb";
+        @"Data source= F:\BESE\6th Semester\Software Construction\Labs\Lab 2\Library-Management-System-SC_Lab2\Library.accdb";
 
             try
             {
@@ -33,19 +33,19 @@ namespace WindowsFormsApp1
 
                 String my_querry = "select * from tblMembers where UserName = '" + username + "' and Pasword = '" + Paswrd + "'";
 
-
                 OleDbCommand cmd = new OleDbCommand(my_querry, conn);
+                OleDbDataReader rd = cmd.ExecuteReader();
                 //OleDbDataReader dr = cmd.ExecuteReader();
-                var dr = cmd.ExecuteReader();
 
-                if (dr.Read() == true)
+                if (rd.Read())
                 {
                      MessageBox.Show("Login Successful" );
+                        string usn = (string)rd.GetValue(0);
+                    MessageBox.Show(usn);
 
-                
-                     this.Hide();
+                    this.Hide();
                     
-                    HomePage hp = new HomePage();
+                    HomePage hp = new HomePage(usn);
                     hp.Show();
 
                 }
@@ -64,6 +64,11 @@ namespace WindowsFormsApp1
             {
                 conn.Close();
             }
+
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
 
         }
     }
