@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
                     listBox5.Visible = true;
                     while (dr1.Read())
                     {
-                        listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[11].ToString());
+                        listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[10].ToString());
 
                     }
                 }
@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
                     listBox5.Visible = true;
                     while (dr1.Read())
                     {
-                        listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[11].ToString());
+                        listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[10].ToString());
 
                     }
                 }
@@ -143,7 +143,7 @@ namespace WindowsFormsApp1
                     listBox5.Visible = true;
                     while (dr1.Read())
                     {
-                        listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[11].ToString());
+                        listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[10].ToString());
 
                     }
                 }
@@ -185,16 +185,16 @@ namespace WindowsFormsApp1
 
                 //OleDbDataReader dr = cmd.ExecuteReader();
                 var dr1 = cmd1.ExecuteReader();
-                if (dr1.Read() == false)
-                {
-                    listBox5.Visible = false;
-                    MessageBox.Show("Match Not Found");
+                //if (dr1.Read() == false)
+                //{
+                //    listBox5.Visible = false;
+                //    MessageBox.Show("Match Not Found");
 
-                }
+                //}
                 while (dr1.Read())
                 {
                     //MessageBox.Show(dr1[1].ToString());
-                    listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[11].ToString());
+                    listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[10].ToString());
 
                 }
 
@@ -223,7 +223,7 @@ namespace WindowsFormsApp1
                 while (dr1.Read())
                 {
                     //MessageBox.Show(dr1[1].ToString());
-                    listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[11].ToString());
+                    listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[10].ToString());
 
                 }
 
@@ -260,7 +260,7 @@ namespace WindowsFormsApp1
                 
                     while (dr1.Read())
                     {
-                        listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[11].ToString());
+                        listBox5.Items.Add(dr1[1].ToString() + "                                 " + dr1[10].ToString());
 
                     }*/
 
