@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
                 label9.Visible = true;
                 textBox2.Visible = true;
                 button2.Visible = true;
-               String my_querry = "select * from tblBooks where Author = '" + selected + "' ";
+               String my_querry = "select * from tblArtifacts where Author = '" + selected + "' ";
 
 
                 OleDbCommand cmd1 = new OleDbCommand(my_querry, conn);
@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
                 textBox2.Visible = false;
                 textBox4.Visible = false;
                 button2.Visible = true;
-                String my_querry = "select * from tblBooks where Genre = '" + selected + "' ";
+                String my_querry = "select * from tblArtifacts where Genre = '" + selected + "' ";
 
 
                 OleDbCommand cmd1 = new OleDbCommand(my_querry, conn);
@@ -131,7 +131,7 @@ namespace WindowsFormsApp1
                 label9.Visible = false;
                 label1.Visible = false;
                 button2.Visible = true;
-                String my_querry = "select * from tblBooks where Title = '" + selected + "' ";
+                String my_querry = "select * from tblArtifacts where Title = '" + selected + "' ";
 
 
                 OleDbCommand cmd1 = new OleDbCommand(my_querry, conn);
@@ -171,14 +171,14 @@ namespace WindowsFormsApp1
         {
             System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-        @"Data source= C:\Users\asadn\Documents\GitHub\Library-Management-System\Library.accdb";
+        @"Data source= C:\Users\asadn\Documents\GitHub\Library-Management-System-SC_Lab2\Library.accdb";
 
             conn.Open();
             string selected = (string)comboBox2.SelectedItem;
             if (selected == "Author")
             {
                 listBox5.Visible = true;
-                String my_querry = "select * from tblBooks where Author = '" + textBox2.Text + "' ";
+                String my_querry = "select * from tblArtifacts where Author = '" + textBox2.Text + "' ";
 
 
                 OleDbCommand cmd1 = new OleDbCommand(my_querry, conn);
@@ -207,7 +207,7 @@ namespace WindowsFormsApp1
                 listBox5.Visible = true;
                 textBox3.Visible = true;
 
-                String my_querry = "select * from tblBooks where Genre = '" + textBox3.Text + "' ";
+                String my_querry = "select * from tblArtifacts where Genre = '" + textBox3.Text + "' ";
 
 
                 OleDbCommand cmd1 = new OleDbCommand(my_querry, conn);
@@ -235,7 +235,7 @@ namespace WindowsFormsApp1
 
                 listBox5.Items.Clear();
                 listBox5.Items.Add("Title                                     Status");
-                OleDbCommand sqlcommand = new OleDbCommand("select * from tblBooks where Title = '" + textBox4.Text + "'", conn);
+                OleDbCommand sqlcommand = new OleDbCommand("select * from tblArtifacts where Title = '" + textBox4.Text + "'", conn);
                 OleDbDataReader dr1 = sqlcommand.ExecuteReader(); // Execute the sql command and store the results in a reader object
                 listBox5.Visible = true;
                 if (dr1.Read() == false)
@@ -250,7 +250,7 @@ namespace WindowsFormsApp1
                 }
                 /*listBox5.Items.Clear();
                 listBox5.Visible = true;
-                String my_querry = "select * from tblBooks where Title = '" + textBox4.Text + "' ";
+                String my_querry = "select * from tblArtifacts where Title = '" + textBox4.Text + "' ";
 
 
                 OleDbCommand cmd1 = new OleDbCommand(my_querry, conn);

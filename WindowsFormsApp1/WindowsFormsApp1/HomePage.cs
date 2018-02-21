@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             System.Data.OleDb.OleDbConnection conn = new System.Data.OleDb.OleDbConnection();
             conn.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;" +
-        @"Data source= C:\Users\asadn\Documents\GitHub\Library-Management-System\Library.accdb";
+        @"Data source= C:\Users\asadn\Documents\GitHub\Library-Management-System-SC_Lab2\Library.accdb";
 
             try
             {
