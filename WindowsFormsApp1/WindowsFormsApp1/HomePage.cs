@@ -73,5 +73,11 @@ namespace WindowsFormsApp1
             issueForm instance = new issueForm(usn);
             instance.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Fine fine = new Fine(usn);
+            fine.Show();
+        }
     }
 }

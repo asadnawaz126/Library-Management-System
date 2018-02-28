@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
                         OleDbCommand myCommand = new OleDbCommand();
                         string sql = null;
                         myCommand.Connection = dbcon;
-                        sql = "insert into tblTrans ([Book ID], [ID]) values ('" + artifactid + "','" + usn + "')";
+                        sql = "insert into tblTrans ([Book ID], [ID],[Date Returned],[Date Borrowed]) values ('" + artifactid + "','" + usn + "','"+DateTime.Now.AddDays(30)+"','"+ DateTime.Now+"')";
                         myCommand.CommandText = sql;
                         myCommand.ExecuteNonQuery();
 
